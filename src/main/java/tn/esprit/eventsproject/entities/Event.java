@@ -22,9 +22,6 @@ public class Event implements Serializable {
     LocalDate dateDebut;
     LocalDate dateFin;
     float cout;
-    @ManyToMany(mappedBy = "events")
-    Set<Participant> participants;
-    @OneToMany(fetch = FetchType.EAGER)
-    Set<Logistics> logistics;
+
 
 }

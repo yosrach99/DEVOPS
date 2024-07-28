@@ -7,11 +7,10 @@ import tn.esprit.eventsproject.entities.Participant;
 import java.time.LocalDate;
 import java.util.List;
 
-public interface IEventServices {
-    public Participant addParticipant(Participant participant);
-    public Event addAffectEvenParticipant(Event event, int idParticipant);
-    public Event addAffectEvenParticipant(Event event);
-    public Logistics addAffectLog(Logistics logistics, String descriptionEvent);
-    public List<Logistics> getLogisticsDates(LocalDate date_debut, LocalDate date_fin);
-    public void calculCout();
+public interface IEventServices  {
+    Event addEvent(Event event);
+    Event updateEvent(Event event);
+    void deleteEvent(int idEvent);
+    List<Event> getAllEvents();
+    Event getEventById(int idEvent);
 }
